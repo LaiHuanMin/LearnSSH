@@ -30,17 +30,17 @@ public class LoginAction extends ActionSupport{
 			Integer loginTimes = (Integer)ActionContext.getContext().getSession().get("loginTimes");
 			System.out.println(loginTimes);
 			ActionContext.getContext().getSession().put("loginTimes", ++loginTimes);
-			return SUCCESS; 
-		} else { 
-			return FAIL;
+			return SUCCESS;   
+		} else {  
+			return FAIL;  
 		}
 	}
 	
 	public void validate() {
 		if(getUsername() == null || getUsername().trim().equalsIgnoreCase("")) {
-			addFieldError("username","user.required");
+			addFieldError("username","请输入用户名");
 		}else if(getPassword() == null || getPassword().trim().equals("")) {
-			addFieldError("password", "password.required");
+			addFieldError("password", "请输入密码");
 		}
 	}
 }
