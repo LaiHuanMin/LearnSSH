@@ -6,10 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<s:head theme="ajax" />
-</head>
-<body>
-	<h1>Welcome to login</h1>
+<s:head theme="ajax" /> 
+</head> 
+<body> 
+	<h1>Welcome to login</h1>  
 	<s:form action="Login.action" method="POST">
 		<s:textfield label="用户" name="username" />
 		<s:textfield label="密码" name="password" />

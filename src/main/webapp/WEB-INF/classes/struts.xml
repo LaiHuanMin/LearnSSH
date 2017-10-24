@@ -6,13 +6,17 @@
 
 <struts>
 	<package name="default" extends="struts-default">
+		<interceptors>
+			<interceptor name="validUser" class="rm.rmrf.interceptor.ValidUser"></interceptor>
+			<interceptor name="log" class="rm.rmrf.interceptor.Logger"></interceptor>
+		</interceptors>
 		<action name="Login" class="rm.rmrf.action.LoginAction">
 			<result name="input">/login.jsp</result>
 			<result name="success">/welcome.jsp</result>
 			<result name="fail">/fail.jsp</result>
-		</action> 
-		<action name="GetBook" class="rm.rmrf.action.GetBookAction"> 
+		</action>
+		<action name="GetBook" class="rm.rmrf.action.GetBookAction">
 			<result name="success">/Books.jsp</result>
-		</action> 
-	</package> 
+		</action>
+	</package>
 </struts>
