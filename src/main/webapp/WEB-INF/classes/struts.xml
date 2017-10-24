@@ -9,8 +9,14 @@
 		<interceptors>
 			<interceptor name="validUser" class="rm.rmrf.interceptor.ValidUser"></interceptor>
 			<interceptor name="log" class="rm.rmrf.interceptor.Logger"></interceptor>
-		</interceptors>
+			<interceptor-stack name="validAndLog">
+				<interceptor-ref name="validUser"></interceptor-ref>
+				<interceptor-ref name="log"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>  
 		<action name="Login" class="rm.rmrf.action.LoginAction">
+			<interceptor-ref name="validAndLog"></interceptor-ref>
 			<result name="input">/login.jsp</result>
 			<result name="success">/welcome.jsp</result>
 			<result name="fail">/fail.jsp</result>

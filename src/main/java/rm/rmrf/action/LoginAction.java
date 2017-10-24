@@ -28,7 +28,7 @@ public class LoginAction extends ActionSupport{
 	public String execute() throws Exception {
 		if (getUsername().equals("lai") && getPassword().equals("1234")) {
 			Integer loginTimes = (Integer)ActionContext.getContext().getSession().get("loginTimes");
-			System.out.println(loginTimes);
+			System.out.println(loginTimes); 
 			ActionContext.getContext().getSession().put("loginTimes", ++loginTimes);
 			return SUCCESS;   
 		} else {  
