@@ -7,7 +7,12 @@
 <struts>
 	<package name="default" extends="struts-default">
 		<action name="Login" class="rm.rmrf.action.LoginAction">
-			<result name="ok">/ok.jsp</result>
-		</action>
-	</package>
+			<result name="input">/login.jsp</result>
+			<result name="success">/welcome.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action> 
+		<action name="GetBook" class="rm.rmrf.action.GetBookAction"> 
+			<result name="success">/Books.jsp</result>
+		</action> 
+	</package> 
 </struts>
