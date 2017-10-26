@@ -35,5 +35,8 @@
 			<result name="success">/convert.jsp</result>
 			<result>/convert.jsp</result>
 		</action>
+		<action name="Upload" class="rm.rmrf.action.UploadFileAction">
+			<result name="success">/uploadOK.jsp</result>
+		</action>
 	</package>
 </struts>

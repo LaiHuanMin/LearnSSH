@@ -21,7 +21,7 @@
 	</div>
 	<div>
 		User:
-		<s:property value="user" />
+		<s:property value="user.password" />
 	</div>
 </body>
 </html>

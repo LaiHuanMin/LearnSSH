@@ -28,5 +28,15 @@
 		<s:textarea label="密码" name="splitPassword"></s:textarea>
 		<s:submit value="提交"></s:submit>
 	</s:form>
+
+	<h1>Watch POST Detail</h1>
+	<form action="/WatchDetail.jsp" method="POST"
+		enctype="multipart/form-data">
+		<input type="text" value="detailName" name="详情名" /> <input
+			type="text" value="detailPass" name="详情密码" /> 
+			<input type="file" name="文件"/>
+			<input type="submit" 
+			value="提交" />
+	</form>
 </body>
 </html>

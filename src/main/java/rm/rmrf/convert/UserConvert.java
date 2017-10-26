@@ -16,7 +16,7 @@ public class UserConvert extends DefaultTypeConverter {
 		if (toType == User.class) {
 			System.out.println("I prove you invoke convert to user class");
 			String[] params = (String[])value;
-			User user = new User(params[0],params[1]);
+			User user = new User(params[0],"OKKOK");
 			return user;
 		} else if (toType == String.class) {
 			System.out.println("i prove you invoke convert to String");
