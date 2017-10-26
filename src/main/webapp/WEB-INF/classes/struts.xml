@@ -14,7 +14,10 @@
 				<interceptor-ref name="log"></interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
 			</interceptor-stack>
-		</interceptors>  
+		</interceptors>
+		<global-results>
+			<result name="globalExp">/500.jsp</result>
+		</global-results>
 		<action name="Login" class="rm.rmrf.action.LoginAction">
 			<interceptor-ref name="validAndLog"></interceptor-ref>
 			<result name="input">/login.jsp</result>
@@ -23,6 +26,14 @@
 		</action>
 		<action name="GetBook" class="rm.rmrf.action.GetBookAction">
 			<result name="success">/Books.jsp</result>
+		</action>
+		<action name="ShowException" class="rm.rmrf.action.ShowException">
+			<result name="success" type="plaintext">/Books.jsp</result>
+			<exception-mapping result="globalExp" exception="java.lang.Exception"></exception-mapping>
+		</action>
+		<action name="Convert" class="rm.rmrf.action.ConvertAction">
+			<result name="success">/convert.jsp</result>
+			<result>/convert.jsp</result>
 		</action>
 	</package>
 </struts>

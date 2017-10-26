@@ -6,10 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<s:head theme="ajax" /> 
-</head> 
-<body> 
-	<h1>Welcome to login</h1>  
+<s:head theme="ajax" />
+</head>
+<body>
+	<h1>Welcome to login</h1>
 	<s:form action="Login.action" method="POST">
 		<s:textfield label="用户" name="username" />
 		<s:textfield label="密码" name="password" />
@@ -20,5 +20,13 @@
 	<s:text name="当前登陆次数">
 	</s:text>
 	${sessionScope.loginTimes}
+
+	<h1>Welcome to convert value</h1>
+	<s:form action="Convert.action" method="POST">
+		<s:text name="notice">输入值以.号分开</s:text>
+		<s:textfield label="用户名" name="splitUsername"></s:textfield>
+		<s:textarea label="密码" name="splitPassword"></s:textarea>
+		<s:submit value="提交"></s:submit>
+	</s:form>
 </body>
 </html>
