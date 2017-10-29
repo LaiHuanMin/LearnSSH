@@ -54,6 +54,6 @@ public class UploadFileAction extends ActionSupport{
 
 	public String execute() throws Exception {
 		System.err.println("qiekenao:"+getUpload());
-		return Action.SUCCESS;
+		return Action.SUCCESS; 
 	}
 }

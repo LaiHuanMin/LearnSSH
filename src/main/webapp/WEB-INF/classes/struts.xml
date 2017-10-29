@@ -39,4 +39,9 @@
 			<result name="success">/uploadOK.jsp</result>
 		</action>
 	</package>
+	<package name="test" extends="json-default" namespace="/what">
+		<action name="GetJSON" class="rm.rmrf.action.GetJSON">
+			<result name="success" type="json">dataMap</result>
+		</action>
+	</package>
 </struts>
